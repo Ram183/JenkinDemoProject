@@ -13,7 +13,7 @@ public class Adactin_Hotel_Demo_Project {
 	public static WebDriver driver;
 
 	public static void main(String[] args) throws Exception {
-
+		
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\ramku\\eclipse-workspace\\Adactin_Hotel\\Browser\\chromedriver.exe");
 
 		driver = new ChromeDriver();
