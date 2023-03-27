@@ -15,13 +15,13 @@ public class Demo_Class {
 
 		driver = new EdgeDriver();
 
-		driver.get("https://adactinhotelapp.com/");
-
-		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 
 		driver.manage().window().maximize();
 		
-		driver.quit();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		
+		driver.close();
 
 	}
 
