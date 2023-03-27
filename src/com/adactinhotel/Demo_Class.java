@@ -3,6 +3,7 @@ package com.adactinhotel;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
 public class Demo_Class {
@@ -11,17 +12,17 @@ public class Demo_Class {
 
 	public static void main(String[] args) {
 
-		System.setProperty("webdriver.edge.driver", "C:\\Users\\ramku\\eclipse-workspace\\Adactin_Hotel\\Browser\\msedgedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\ramku\\eclipse-workspace\\Adactin_Hotel\\Browser\\chromedriver.exe");
 
-		driver = new EdgeDriver();
+		driver = new ChromeDriver();
 
-		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+		driver.get("https://demoqa.com/");
 
-		driver.manage().window().maximize();
-		
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
-		driver.close();
+		driver.manage().window().maximize();
+		
+		driver.quit();
 
 	}
 
