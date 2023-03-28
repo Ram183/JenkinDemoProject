@@ -4,13 +4,13 @@ public class Java_Program {
 
 	public static void main(String[] args) {
 
-		int a = 10;
+		int e = 60;
 
-		int b = 20;
+		int f = 50;
 
-		int c = a + b;
+		int g = e + f;
 
-		System.out.println("The Value of C: " + c);
+		System.out.println("The Value of g: " + g);
 
 	}
 
