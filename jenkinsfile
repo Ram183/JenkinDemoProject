@@ -1,44 +1,34 @@
 pipeline {
     agent any
-
-    stages {
-        stage('Hello') {
-            steps {
-                echo "Hello World"
-            }
-        }
-    }
-
-stages {
+     stages {
         stage('Build') {
             steps {
                 echo "Building Stage"
+                bat "mvn clean"
             }
         }
     }
-
-stages {
+     stages {
+        stage('Test') {
+            steps {
+                echo "Testing Stage"
+                 bat "mvn test"
+            }
+        }
+    }
+    stages {
+        stage('compile') {
+            steps {
+                echo "Compiling the Project"
+                bat "mvn compile"
+            }
+        }
+    }
+       stages {
         stage('Deploy') {
             steps {
                 echo "Deploying Stage"
             }
         }
     }
-
-stages {
-        stage('Test') {
-            steps {
-                echo "Testing Stage"
-            }
-        }
-    }
-
-stages {
-        stage('Release') {
-            steps {
-                echo "Releasing Stage"
-            }
-        }
-    }
-
 }
